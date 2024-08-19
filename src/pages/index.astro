@@ -1,5 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
+import { Picture } from 'astro:assets';
+import profile from '../profile.jpeg';
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -41,11 +43,7 @@ const projects = (await getCollection('work'))
 					</div>
 				</Hero>
 
-				<img
-					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
-					width="200"
-					src="https://media.licdn.com/dms/image/D5603AQHqucWsDXW3vQ/profile-displayphoto-shrink_400_400/0/1667287828665?e=1716422400&v=beta&t=T-xA_0zbYouOTHEvuKMg4kS2GPcibRAhzWnibrRohw8"
-				/>
+				<Picture pictureAttributes={{ style: {'justifySelf': 'center', 'alignSelf':"center"} }}  src={profile} formats={['avif', 'webp']} alt="Hassan in a white t-shirt looking to his right" width={300} height={400} />
 			</header>
 
 			<Skills />
@@ -121,10 +119,10 @@ const projects = (await getCollection('work'))
 	.hero img {
 		justify-self:center;
 		align-self:center;
-		aspect-ratio: 4 / 3;
+		aspect-ratio: 3.5 / 3;
 		object-fit: cover;
 		object-position: top;
-		box-shadow: var(--shadow-md);
+		border-radius: 1.5rem;
 	}
 
 	@media (min-width: 50em) {
@@ -143,7 +141,7 @@ const projects = (await getCollection('work'))
 
 		.hero img {
 			aspect-ratio: 3 / 4;
-			object-fit: cover;
+			object-fit: contain;
 			border-radius: 1.5rem;
 		}
 	}
