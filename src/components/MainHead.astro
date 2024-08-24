@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import profile from '../profile.jpeg';
 
 interface Props {
 	title?: string | undefined;
@@ -7,15 +8,19 @@ interface Props {
 }
 
 const {
-	title = 'Mohammed Arshad: Personal Site',
+	title = 'Mohammed Arshad Hassan: Personal Site',
 	description = 'The personal site of Mohammed Arshad Hassan',
 } = Astro.props;
 ---
-
 <meta charset="UTF-8" />
 <meta name="description" property="og:description" content={description} />
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
+<meta name="image" property="og:image" content={profile.src}/>
+<meta name="site_name" property="og:site_name" content="mohammed-arshad.vercel.app" />
+<meta name="title" property="og:title" content={title} />
+<meta name="description" property="og:description" content={description} />
+<meta name="url" property="og:url" content="https://mohammed-arshad.vercel.app/"/>
 <title>{title}</title>
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
