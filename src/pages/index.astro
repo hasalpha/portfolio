@@ -43,7 +43,11 @@ const projects = (await getCollection('work'))
 					</div>
 				</Hero>
 
-				<Picture pictureAttributes={{ style: {'justifySelf': 'center', 'alignSelf':"center"} }}  src={profile} formats={['avif', 'webp']} alt="Hassan in a white t-shirt looking to his right" width={300} height={400} />
+				<Picture 
+					pictureAttributes={{ 
+						style: {
+							'justifySelf': 'center', 'alignSelf':"center"} }}  
+					src={profile} formats={['avif', 'webp']} alt="Hassan in a white t-shirt looking to his right" width={300} />
 			</header>
 
 			<Skills />
@@ -140,9 +144,9 @@ const projects = (await getCollection('work'))
 		}
 
 		.hero img {
-			aspect-ratio: 3 / 4;
-			object-fit: contain;
 			border-radius: 1.5rem;
+			object-fit: cover;
+			aspect-ratio: auto 1/1;
 		}
 	}
 

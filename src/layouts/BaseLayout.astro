@@ -14,6 +14,7 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+console.log(Astro.site);
 ---
 
 <html lang="en">
@@ -104,8 +105,8 @@ const { title, description } = Astro.props;
 				}
 			}
 			.theme-dark .backgrounds{
-				background: rgb(121,10,10);
-				background: linear-gradient(0deg, rgba(121,10,10,1) 0%, rgba(0,0,0,1) 100%);
+				background: #021526;
+				background: linear-gradient(180deg, 021526 0%, #1F316F 100%);
 			}
 		</style>
 	</body>

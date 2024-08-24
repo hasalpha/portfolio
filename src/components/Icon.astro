@@ -7,9 +7,9 @@ interface Props {
 	color?: string;
 	gradient?: boolean;
 	size?: string;
+	class?: string
 }
-
-const { color = 'currentcolor', gradient, icon, size } = Astro.props;
+const { color = 'currentcolor', gradient, icon, size, class:className} = Astro.props;
 const iconPath = iconPaths[icon];
 
 const attrs: HTMLAttributes<'svg'> = {};
@@ -19,6 +19,7 @@ const gradientId = 'icon-gradient-' + Math.round(Math.random() * 10e12).toString
 ---
 
 <svg
+	class={className}
 	xmlns="http://www.w3.org/2000/svg"
 	width="40"
 	height="40"
