@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
+import profile from '../profile.jpeg';
+import { Picture } from 'astro:assets';
 ---
 
 <BaseLayout title="About | Mohammed Arshad Hassan" description="About Mohammed Arshad Hassan Lorem Ipsum">
@@ -12,12 +14,12 @@ import Hero from '../components/Hero.astro';
 				title="About"
 				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
 			>
-				<img
-					width="1553"
-					height="873"
-					src="/assets/at-work.jpg"
-					alt="Mohammed Arshad Hassan at work with a colleague"
-				/>
+
+				<Picture 
+					pictureAttributes={{ 
+						style: {
+							'justifySelf': 'center', 'alignSelf':"center"} }}  
+					src={profile} formats={['avif', 'webp']} alt="Hassan in a white t-shirt looking to his right" width={300} />
 			</Hero>
 
 			<section>
