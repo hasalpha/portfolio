@@ -1,7 +1,7 @@
 ---
 title: Talent Inc
-publishDate: 2019-12-01 00:00:00
-img: /assets/stock-2.jpg
+publishDate: 2024-12-01 00:00:00
+img: /assets/talentinc.webp
 img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
 description: |
     They offer professional resume writing services to help individuals create compelling documents that showcase their skills and experience.

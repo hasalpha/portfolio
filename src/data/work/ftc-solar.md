@@ -1,7 +1,7 @@
 ---
 title: Sundat Web
-publishDate: 2019-10-02 00:00:00
-img: /assets/stock-4.jpg
+publishDate: 2020-10-02 00:00:00
+img: /assets/ftcsolar.png
 img_alt: Soft pink and baby blue water ripples together in a subtle texture.
 description: |
     SUNDAT Web: Online PV Design Software

@@ -1,7 +1,7 @@
 ---
 title: Credibled Inc
-publishDate: 2020-03-02 00:00:00
-img: /assets/stock-1.jpg
+publishDate: 2022-03-02 00:00:00
+img: /assets/credibled.png
 img_alt: Iridescent ripples of a bright blue and pink liquid
 description: |
     Automated Reference & Background Check Software Designed By Recruiters
