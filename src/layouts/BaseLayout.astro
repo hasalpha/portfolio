@@ -22,7 +22,7 @@ const { title, description } = Astro.props;
 		<ViewTransitions />
 	</head>
 	<body>
-		<div class="stack backgrounds">
+		<div class="stack backgrounds min-h-screen">
 			<Nav transition:animate="slide"/>
 			<slot />
 			<Footer />
@@ -91,7 +91,7 @@ const { title, description } = Astro.props;
 			}
 
 			.backgrounds {
-				min-height: 100%;
+				min-height: 100vh;
 				isolation: isolate;
 				background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 			}
