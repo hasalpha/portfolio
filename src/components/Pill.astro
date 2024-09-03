@@ -1,4 +1,6 @@
-<div class="pill"><slot /></div>
+---
+---
+<div class={"pill " + Astro.props.class ?? ""}><slot /></div>
 
 <style>
 	.pill {
