@@ -13,6 +13,7 @@ import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
+import TechGrid from '../components/TechGrid.astro';
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
@@ -87,41 +88,8 @@ const projects = (await getCollection('work'))
 				</header>
 			</section>
 
-			<section class="text-center">
-				<header>
-					<h3>Frontend</h3>
-				</header>
-				<br />
-				<div class="gallery">
-					<Grid variant="small">
-						{
-						['React', 'NextJS', 'Astro', 'Tailwind', 'Figma'].map((brand) => (
-						<li class="mention-card">
-							<p>{brand}</p>
-						</li>
-						))
-						}
-					</Grid>
-				</div>
-			</section>
-
-			<section class="text-center">
-				<header>
-					<h3>Backend</h3>
-				</header>
-				<br />
-				<div class="gallery">
-					<Grid variant="small">
-						{
-						['NodeJS', 'Bun', 'Express', 'Go', 'PostgresQL', 'MongoDB', 'AWS Lambda'].map((brand) => (
-						<li class="mention-card">
-							<p>{brand}</p>
-						</li>
-						))
-						}
-					</Grid>
-				</div>
-			</section>
+			<TechGrid title='frontend' technologies={['React', 'NextJS', 'Astro', 'Tailwind', 'Figma']} />
+			<TechGrid title='backend' technologies={['NodeJS', 'Bun', 'Express', 'Go', 'PostgresQL', 'MongoDB', 'AWS Lambda']} />
 		</main>
 
 		<ContactCTA />
@@ -253,23 +221,4 @@ const projects = (await getCollection('work'))
 
 /* ====================================================== */
 
-.mention-card {
-	display: flex;
-	height: 7rem;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	border: 1px solid var(--gray-800);
-	border-radius: 1.5rem;
-	color: var(--gray-300);
-	background: var(--gradient-subtle);
-	box-shadow: var(--shadow-sm);
-}
-
-@media (min-width: 50em) {
-	.mention-card {
-		border-radius: 1.5rem;
-		height: 9.5rem;
-	}
-}
 </style>

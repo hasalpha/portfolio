@@ -1,0 +1,48 @@
+---
+import Grid from '../components/Grid.astro';
+
+interface Props {
+	technologies: Array<string>;
+	title: string;
+}
+const {technologies, title} = Astro.props;
+---
+
+<section class="text-center">
+	<header>
+		<h3 class="capitalize">{title}</h3>
+	</header>
+	<br />
+	<div class="gallery">
+		<Grid variant="small">
+			{technologies.map((brand) => (
+			<li class="mention-card">
+				<p>{brand}</p>
+			</li>
+			))
+			}
+		</Grid>
+	</div>
+</section>
+<style>
+
+.mention-card {
+	display: flex;
+	height: 7rem;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border: 1px solid var(--gray-800);
+	border-radius: 1.5rem;
+	color: var(--gray-300);
+	background: var(--gradient-subtle);
+	box-shadow: var(--shadow-sm);
+}
+
+@media (min-width: 50em) {
+	.mention-card {
+		border-radius: 1.5rem;
+		height: 9.5rem;
+	}
+}
+</style>
