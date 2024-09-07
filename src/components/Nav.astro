@@ -11,7 +11,7 @@ const textLinks: { label: string; href: string }[] = [
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
-const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[] = [
+const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths; download?:string }[] = [
 	{ label: 'Twitter', href: 'https://x.com/ft_arshad', icon: 'twitter-logo' },
 	{ label: 'GitHub', href: 'https://github.com/hasalpha', icon: 'github-logo' },
 	{ label: 'YouTube', href: 'https://www.youtube.com/@mohammedarshadhassanabdurr8644', icon: 'youtube-logo' },
@@ -96,9 +96,10 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		</ul>
 		<div class="menu-footer">
 			<div class="socials">
+			<a class="text-[16px] pt-2" href="/hasan-resume.pdf" download="hasans-resume">Download Resume</a>
 				{
-					iconLinks.map(({ href, icon, label }) => (
-						<a href={href} class="social">
+				iconLinks.map(({ href, icon, label, download }) => (
+				<a href={href} class="social" download={download}>
 							<span class="sr-only">{label}</span>
 							<Icon icon={icon} />
 						</a>
